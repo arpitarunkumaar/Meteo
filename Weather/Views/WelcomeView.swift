@@ -8,7 +8,8 @@
 import SwiftUI
 import CoreLocationUI
 
-struct WelcomeView: View {
+struct WelcomeView: View
+{
     @EnvironmentObject var locationManager: LocationManager
     var body: some View
     {
