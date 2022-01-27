@@ -21,9 +21,10 @@ struct WeatherRow: View
                 .font(.title2)
                 .frame(width: 20, height: 20)
                 .padding()
-                .background(Color(hue: 0.491, saturation: 0.944, brightness: 0.188, opacity: 0.792))
-                        .preferredColorScheme(.dark)
+                .background(Color(hue: 1.0, saturation: 0.0, brightness: 0.888))
+                .cornerRadius(50)
 
+            
             VStack(alignment: .leading, spacing: 8)
             {
                 Text(name)
@@ -37,8 +38,10 @@ struct WeatherRow: View
     }
 }
 
-struct WeatherRow_Previews: PreviewProvider {
-    static var previews: some View {
+struct WeatherRow_Previews: PreviewProvider
+{
+    static var previews: some View
+    {
         WeatherRow(logo: "thermometer", name: "Feels like", value: "8°")
     }
 }

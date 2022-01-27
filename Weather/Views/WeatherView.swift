@@ -2,7 +2,7 @@
 //  WeatherView.swift
 //  Weather
 //
-//  Created by Arpit Arun Kumaar on 2022-01-15.
+//  Created by Arpit Arun Kumaar on 2022-01-14.
 //
 
 import SwiftUI
@@ -54,12 +54,11 @@ struct WeatherView: View
                     Spacer()
                         .frame(height:  80)
                     
-                    AsyncImage(url: URL(string: "https://cdn.pixabay.com/photo/2020/01/24/21/33/city-4791269_960_720.png"))
-                    {
-                        image in image
+                    AsyncImage(url: URL(string: "https://cdn.pixabay.com/photo/2020/01/24/21/33/city-4791269_960_720.png")) { image in
+                        image
                             .resizable()
                             .aspectRatio(contentMode: .fit)
-                            .frame(width: scaledToFit())
+                            .scaledToFit()
                     } placeholder:
                     {
                         ProgressView()
@@ -98,14 +97,15 @@ struct WeatherView: View
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding()
                 .padding(.bottom, 20)
-                .foregroundColor(Color(hue: 0.656, saturation: 0.787, brightness: 0.354))
+                .foregroundColor(Color(hue: 0.491, saturation: 0.944, brightness: 0.188, opacity: 0.792))
                 .background(.white)
                 .cornerRadius(20, corners: [.topLeft, .topRight])
             }
         }
         .edgesIgnoringSafeArea(.bottom)
         .background(Color(hue: 0.491, saturation: 0.944, brightness: 0.188, opacity: 0.792))
-                .preferredColorScheme(.dark)    }
+        .preferredColorScheme(.dark)
+    }
 }
 
 struct WeatherView_Previews: PreviewProvider
